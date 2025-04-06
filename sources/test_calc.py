@@ -31,7 +31,7 @@ class TestCalc(unittest.TestCase):
     def test_add_string_and_integer(self):
         """
         Test the addition of a string and an integer returns them as one
-        concatenated string (in which the integer is converted to a string)
+        concatenated string (in which the integer is converted to a string- strings will be concatenated and numbers will be added and sum will be the output)
         """
         result = calc.add2('abc', 3)
         self.assertEqual(result, 'abc3')
