@@ -1,5 +1,14 @@
 pipeline {
     agent any
+    environment {
+        NGROK_URL = "ffb8-69-159-49-102.ngrok-free.app"
+    }
+    stages {
+        stage('Log NGROK URL') {
+            steps {
+                echo "Jenkins is accessible via: ${env.NGROK_URL}"
+            }
+        }
     stages {
         stage('Build') {
             steps {
