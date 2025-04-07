@@ -12,7 +12,7 @@ pipeline {
                     -v "%WORKSPACE%":/workspace ^
                     -w /workspace ^
                     python:3-alpine ^
-                    sh -c "python -m py_compile sources/add2vals.py sources/calc.py"
+                    sh -c "python -m py_compile add2vals.py calc.py"
                     '''
                 }
             }
@@ -28,7 +28,7 @@ pipeline {
                     -v "%WORKSPACE%":/workspace ^
                     -w /workspace ^
                     qnib/pytest ^
-                    sh -c "py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py"
+                    sh -c "py.test --verbose --junit-xml test-reports/results.xml test_calc.py"
                     '''
                 }
             }
@@ -49,7 +49,7 @@ pipeline {
                     -v "%WORKSPACE%":/workspace ^
                     -w /workspace ^
                     cdrx/pyinstaller-linux:python3 ^
-                    sh -c "pyinstaller --onefile sources/add2vals.py"
+                    sh -c "pyinstaller --onefile add2vals.py"
                     '''
                 }
             }
