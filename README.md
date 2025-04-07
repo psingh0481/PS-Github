@@ -1,9 +1,17 @@
 # Jenkins Pipeline Setup
 1. Fork this repository
 2. Configure webhooks:
-   - GitHub: `http://<NGROK-URL>/github-webhook/`
-   - Gitea: `http://jenkins.jenkins.svc.cluster.local:8080/gitea-webhook/`
-3. Jenkinsfile stages:
-   - Build with Python 3
-   - Test with pytest
-   - Deliver with PyInstaller# GitHub Test
+
+## Repository Setup for Jenkins Pipelines
+Jenkinsfile Repository:
+Create a second repository (fork from the provided article) that includes a Jenkinsfile.
+
+## GitHub Repository:
+Push the repository to GitHub.
+
+Configure GitHub to run the Jenkins pipeline through the ngrok ingress.
+
+Gitea Repository:
+
+Push your repository to Gitea.
+Configure Gitea to run the Jenkins pipeline using the cluster IP.
