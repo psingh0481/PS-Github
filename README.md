@@ -6,4 +6,4 @@
 3. Jenkinsfile stages:
    - Build with Python 3
    - Test with pytest
-   - Deliver with PyInstaller
+   - Deliver with PyInstaller# GitHub Test
