@@ -1,0 +1,14 @@
+gitea:
+  admin:
+    username: admin
+    password: admin123
+  service:
+    http:
+      type: ClusterIP
+ingress:
+  enabled: true
+  hosts:
+    - host: gitea.your-cluster.local
+      paths:
+        - path: /
+          pathType: Prefix
